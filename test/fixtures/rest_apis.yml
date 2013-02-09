@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  request: MyString
+  response: MyText
+  method: MyString
+  http_status_code: 1
+  webservice_id: 
+
+two:
+  name: MyString
+  request: MyString
+  response: MyText
+  method: MyString
+  http_status_code: 1
+  webservice_id: 

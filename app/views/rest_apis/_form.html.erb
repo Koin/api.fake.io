@@ -1,0 +1,41 @@
+<%= form_for(@rest_api) do |f| %>
+  <% if @rest_api.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rest_api.errors.count, "error") %> prohibited this rest_api from being saved:</h2>
+
+      <ul>
+      <% @rest_api.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :request %><br />
+    <%= f.text_field :request %>
+  </div>
+  <div class="field">
+    <%= f.label :response %><br />
+    <%= f.text_area :response %>
+  </div>
+  <div class="field">
+    <%= f.label :method %><br />
+    <%= f.text_field :method %>
+  </div>
+  <div class="field">
+    <%= f.label :http_status_code %><br />
+    <%= f.number_field :http_status_code %>
+  </div>
+  <div class="field">
+    <%= f.label :webservice %><br />
+    <%= f.text_field :webservice %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

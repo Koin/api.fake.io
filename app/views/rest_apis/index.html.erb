@@ -1,0 +1,37 @@
+<h1>Listing rest_apis</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Request</th>
+      <th>Response</th>
+      <th>Method</th>
+      <th>Http status code</th>
+      <th>Webservice</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rest_apis.each do |rest_api| %>
+    <tr>
+      <td><%= rest_api.name %></td>
+      <td><%= rest_api.request %></td>
+      <td><%= rest_api.response %></td>
+      <td><%= rest_api.method %></td>
+      <td><%= rest_api.http_status_code %></td>
+      <td><%= rest_api.webservice %></td>
+      <td><%= link_to 'Show', rest_api %></td>
+      <td><%= link_to 'Edit', edit_rest_api_path(rest_api) %></td>
+      <td><%= link_to 'Destroy', rest_api, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Rest api', new_rest_api_path %>

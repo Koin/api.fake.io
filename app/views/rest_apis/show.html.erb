@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rest_api.name %>
+</p>
+
+<p>
+  <strong>Request:</strong>
+  <%= @rest_api.request %>
+</p>
+
+<p>
+  <strong>Response:</strong>
+  <%= @rest_api.response %>
+</p>
+
+<p>
+  <strong>Method:</strong>
+  <%= @rest_api.method %>
+</p>
+
+<p>
+  <strong>Http status code:</strong>
+  <%= @rest_api.http_status_code %>
+</p>
+
+<p>
+  <strong>Webservice:</strong>
+  <%= @rest_api.webservice %>
+</p>
+
+
+<%= link_to 'Edit', edit_rest_api_path(@rest_api) %> |
+<%= link_to 'Back', rest_apis_path %>

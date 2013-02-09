@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130209120539) do
+ActiveRecord::Schema.define(version: 20130209122049) do
+
+  create_table "rest_apis", force: true do |t|
+    t.string   "name"
+    t.string   "request"
+    t.text     "response"
+    t.string   "method"
+    t.integer  "http_status_code"
+    t.integer  "webservice_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "rest_apis", ["webservice_id"], name: "index_rest_apis_on_webservice_id"
 
   create_table "webservices", force: true do |t|
     t.string   "name"

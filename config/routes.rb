@@ -1,4 +1,6 @@
 ApiFakeIo::Application.routes.draw do
+  resources :rest_apis
+
   resources :webservices
 
   get "home/index"
