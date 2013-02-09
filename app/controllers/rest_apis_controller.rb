@@ -24,17 +24,9 @@ class RestApisController < ApplicationController
   # POST /rest_apis
   # POST /rest_apis.json
   def create
-    @rest_api = RestApi.new(rest_api_params)
-
-    respond_to do |format|
-      if @rest_api.save
-        format.html { redirect_to @rest_api, notice: 'Rest api was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @rest_api }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @rest_api.errors, status: :unprocessable_entity }
-      end
-    end
+    @webservice = Webservice.find(params[:webservice_id])
+    @rest_api = @webservice.rest_apis.create(rest_api_params)
+    redirect_to webservice_path(@webservice)
   end
 
   # PATCH/PUT /rest_apis/1

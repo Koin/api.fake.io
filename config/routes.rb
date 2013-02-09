@@ -1,7 +1,7 @@
 ApiFakeIo::Application.routes.draw do
-  resources :rest_apis
-
-  resources :webservices
+  resources :webservices do
+    resources :rest_apis
+  end
 
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.

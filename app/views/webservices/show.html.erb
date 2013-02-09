@@ -10,6 +10,16 @@
   <%= @webservice.description %>
 </p>
 
+<h2>Add an api:</h2>
+<%= form_for([@webservice, @webservice.rest_apis.build]) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
 
 <%= link_to 'Edit', edit_webservice_path(@webservice) %> |
 <%= link_to 'Back', webservices_path %>
