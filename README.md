@@ -8,9 +8,15 @@
 
 ## Install
 
-* Configuration
-* Database creation
-* Database initialization
+### Dependencies
+```sh
+$ bundle
+```
+
+### Database creation
+```sh
+$ rake db:migrate
+```
 
 ## How to run the test suite
 
