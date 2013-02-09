@@ -1,5 +1,7 @@
 # api.fake.io
 
+It's a simple service which permits you to mock a RESTful web service.
+
 ## System dependencies 
 
 * ruby (1.9.3)
